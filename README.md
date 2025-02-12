@@ -1,1 +1,10 @@
 # ComparatorNetwork
+
+DISCLAIMER: Keep in mind this program requires GHCup and other programs to work effectively and is added to this repo as a showcase of its completion, it should not copied or downloaded without the proper authorization.
+
+This Haskell program manipulates and processes comparator networks, represented as a list of pairs (Int, Int) where each pair defines a comparator between two indices in a sequence. The program provides functions to read, write, reverse, apply, and convert these networks into parallel form. The writeNetwork function formats a Network into a string, with each comparator pair formatted as x -- y, and writes it to a file. Conversely, readNetwork reads a Network from a file, parsing its contents into the appropriate list of pairs.
+
+The reverseNetwork function reverses the order of comparators in a Network, while applyNetwork applies a Network to a sequence of integers, swapping elements at the specified indices if the comparator condition is met. This is implemented using a helper function, swap, which performs the element swaps. The program also includes functionality to convert a Network into parallel form via toParallelForm, grouping comparators that can operate simultaneously (i.e., those with non-overlapping indices). The resulting parallel form is formatted and written to a file using writeParallel.
+
+The main function serves as the command-line interface, processing arguments to perform specific operations. For example, the Read operation reads a Network from a file and writes it to network.txt, while Reverse reads a Network, reverses it, and writes the result to reverse.txt. The Run operation reads a Network, applies it to a provided sequence of integers, and prints the result. Finally, the Parallel operation reads a Network, converts it to parallel form, and writes the result to parallel.txt. The program is designed to be a practical utility for working with comparator networks, offering tools for manipulation, application, and optimization.
+
